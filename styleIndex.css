@@ -20,7 +20,7 @@ body {
     text-align: center;
     color: white;  /* Seteaza culoarea textului pe alb */
     z-index: -100;
-    opacity: 50%;
+    opacity: 70%;
     font-weight: bold;
 }
 
@@ -63,3 +63,5 @@ dotlottie-player {
         height: 25px;
     }
 }
+  
+  

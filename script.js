@@ -1,9 +1,9 @@
 const messages = [
-    "Știu că nu se face primăvară cu o floare...",
-    "Dar ce zici de 2?",
-    "Sau 10? Sunt de ajuns?",
-    "Cred că 100 ar trebui să aducă primăvara, tu ce zici?",
-    "Hai că să fiu sigur că s-a făcut primăvară, uite 1001 flori! 🌻"
+    "Știu că nu se face primăvară cu o floare..😔",
+    "Dar ce zici de 2?🤔",
+    "Sau 10? Sunt de ajuns?😄",
+    "Cred că 100 ar trebui să aducă primăvara, tu ce zici?🥰",
+    "Hai ca să fiu sigur că s-a făcut primăvară, uite 1001 flori!🌻💕"
 ];
 
 const flowerCounts = [1, 2, 10, 100, 1001]; // 1001 pentru ultima etapă
@@ -60,7 +60,7 @@ function showFlowers(index) {
     }, 100);
 
     // Continuăm cu următoarea etapă
-    setTimeout(() => showFlowers(index + 1), 3000); // Mărește acest timp pentru o tranziție mai lentă
+    setTimeout(() => showFlowers(index + 1), index*1000+1500); // Mărește acest timp pentru o tranziție mai lentă
 }
 
 // Începem animația
