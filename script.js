@@ -3,10 +3,10 @@ const messages = [
     "Dar ce zici de 2?",
     "Sau 10? Sunt de ajuns?",
     "Cred că 100 ar trebui să aducă primăvara, tu ce zici?",
-    "Hai că să fiu sigur că s-a făcut primăvară, uite 1001 flori! 💐"
+    "Hai că să fiu sigur că s-a făcut primăvară, uite 1001 flori! 🌻"
 ];
 
-const flowerCounts = [1, 2, 10, 100, 501]; // 1001 pentru ultima etapă
+const flowerCounts = [1, 2, 10, 100, 301]; // 1001 pentru ultima etapă
 const backgroundColors = ["#2a2a72", "#ffb347", "#ff69b4", "#ff4081", "#ff1493"];
 
 const messageElement = document.getElementById("message");
@@ -17,7 +17,7 @@ function addFlowers(count) {
         const flower = document.createElement("dotlottie-player");
         flower.setAttribute("src", "https://lottie.host/d5efc981-55f3-4aa1-9629-dcd3db5d956c/HhCrWJalEc.lottie");
         flower.setAttribute("background", "transparent");
-        flower.setAttribute("speed", "1");
+        flower.setAttribute("speed", "0.75");
         flower.setAttribute("loop", "");
         flower.setAttribute("autoplay", "");
         flower.style.position = "absolute";
