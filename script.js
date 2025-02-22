@@ -6,7 +6,7 @@ const messages = [
     "Hai că să fiu sigur că s-a făcut primăvară, uite 1001 flori! 🌻"
 ];
 
-const flowerCounts = [1, 2, 10, 100, 301]; // 1001 pentru ultima etapă
+const flowerCounts = [1, 2, 10, 100, 1001]; // 1001 pentru ultima etapă
 const backgroundColors = ["#2a2a72", "#ffb347", "#ff69b4", "#ff4081", "#ff1493"];
 
 const messageElement = document.getElementById("message");
@@ -15,7 +15,7 @@ const flowerContainer = document.getElementById("flower-container");
 function addFlowers(count) {
     for (let i = 0; i < count; i++) {
         const flower = document.createElement("dotlottie-player");
-        flower.setAttribute("src", "https://lottie.host/d5efc981-55f3-4aa1-9629-dcd3db5d956c/HhCrWJalEc.lottie");
+        flower.setAttribute("src", "https://lottie.host/d47fe17d-6d74-4804-8990-4ad195d4a242/SRnUDoTRCO.json");
         flower.setAttribute("background", "transparent");
         flower.setAttribute("speed", "0.75");
         flower.setAttribute("loop", "");
@@ -48,8 +48,16 @@ function showFlowers(index) {
 
     const flowerCount = flowerCounts[index];
 
-    // Adăugăm florile
-    addFlowers(flowerCount);
+    // Adăugăm florile treptat pentru a evita lag-ul
+    let flowersAdded = 0;
+    const interval = setInterval(() => {
+        addFlowers(1);  // Adaugă câte o floare la fiecare 100ms
+        flowersAdded++;
+
+        if (flowersAdded >= flowerCount) {
+            clearInterval(interval); // Oprire când ajungem la numărul dorit
+        }
+    }, 100);
 
     // Continuăm cu următoarea etapă
     setTimeout(() => showFlowers(index + 1), 3000); // Mărește acest timp pentru o tranziție mai lentă

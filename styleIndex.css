@@ -1,22 +1,26 @@
 /* Stiluri pentru fundalul paginii */
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: #2a2a72;
-    transition: background 1s ease-in-out;
+    display: flex;
+    justify-content: center;  /* Aliniază elementul pe orizontală */
+    align-items: center;      /* Aliniază elementul pe verticală */
+    height: 100vh;            /* Înălțimea completă a ferestrei */
+    background: #2a2a72;      /* Fundal de culoare închisă pentru contrast */
+    font-family: Arial, sans-serif;
 }
 
 /* Mesajele și florile */
 #message {
     position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 50%;  /* Muta textul in mijloc pe verticala */
+    left: 50%; /* Muta textul in mijloc pe orizontala */
+    transform: translate(-50%, -50%); /* Ajusteaza centrul pentru a-l pune exact la mijloc */
     font-size: 3em;
     text-align: center;
-    color: white;
-    z-index: 100;
+    color: white;  /* Seteaza culoarea textului pe alb */
+    z-index: -100;
+    opacity: 50%;
     font-weight: bold;
 }
 
