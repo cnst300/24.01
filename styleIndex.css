@@ -1,30 +1,29 @@
-/* Stiluri pentru fundalul paginii */
+
 body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;  /* Aliniază elementul pe orizontală */
-    align-items: center;      /* Aliniază elementul pe verticală */
-    height: 100vh;            /* Înălțimea completă a ferestrei */
-    background: #2a2a72;      /* Fundal de culoare închisă pentru contrast */
+    justify-content: center;  
+    align-items: center;      
+    height: 100vh;            
+    background: #2a2a72;      
     font-family: Arial, sans-serif;
 }
 
-/* Mesajele și florile */
 #message {
     position: absolute;
-    top: 50%;  /* Muta textul in mijloc pe verticala */
-    left: 50%; /* Muta textul in mijloc pe orizontala */
-    transform: translate(-50%, -50%); /* Ajusteaza centrul pentru a-l pune exact la mijloc */
+    top: 50%;  
+    left: 50%; 
+    transform: translate(-50%, -50%); 
     font-size: 3em;
     text-align: center;
-    color: white;  /* Seteaza culoarea textului pe alb */
+    color: white;  
     z-index: -100;
     opacity: 70%;
     font-weight: bold;
 }
 
-/* Container pentru flori */
+
 #flower-container {
     position: relative;
     width: 100vw;
@@ -32,7 +31,6 @@ body {
     overflow: hidden;
 }
 
-/* Florile (pentru mobil și desktop) */
 dotlottie-player {
     position: absolute;
     width: 50px;
@@ -40,7 +38,6 @@ dotlottie-player {
     z-index: 10;
 }
 
-/* Florile se dimensionează mai mici pe telefoane */
 @media (max-width: 768px) {
     #message {
         font-size: 2em;
@@ -52,7 +49,6 @@ dotlottie-player {
     }
 }
 
-/* Responsivitate completă pe telefoane mici */
 @media (max-width: 480px) {
     #message {
         font-size: 1.5em;
